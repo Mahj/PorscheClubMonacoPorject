@@ -69,6 +69,8 @@ export class MainPage {
                     { name: 'Rate The App', component: 'RatePage' },
                     { name: 'Chat', component: 'ContactsPage' },
                     { name: 'Landing', component: 'LoginBackgroundVideoPage' },
+                    { name: 'Landing Video', component: 'LandingPage' },
+                    { name: 'Calendar', component: 'CalendarPage' },
 
                     { name: 'Discover Places', component: 'CityCategoryPage' },
                     { name: 'e-commerce Shopping', component: 'ShoppingCategoryPage' },
