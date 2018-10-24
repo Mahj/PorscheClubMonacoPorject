@@ -56,6 +56,10 @@ import { Camera } from '@ionic-native/camera';
 
 import { Stripe } from '@ionic-native/stripe';
 
+//import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import { CalendarServiceProvider } from '../providers/calendar-service/calendar-service';
+
 
 @NgModule({
   declarations: [
@@ -104,7 +108,11 @@ import { Stripe } from '@ionic-native/stripe';
       Push,
       Clipboard,
       Toast,
-      Camera
+      Camera,
+      //FileTransfer, FileUploadOptions, FileTransferObject,
+      File,
+    CalendarServiceProvider
+
   ]
 })
 export class AppModule {}
