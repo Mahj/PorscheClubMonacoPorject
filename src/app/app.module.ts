@@ -1,3 +1,4 @@
+//import { EventCalendarPage } from './../pages/event-calendar/event-calendar';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -59,7 +60,7 @@ import { Stripe } from '@ionic-native/stripe';
 //import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { CalendarServiceProvider } from '../providers/calendar-service/calendar-service';
-
+import { NgCalendarModule } from "ionic2-calendar";
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { CalendarServiceProvider } from '../providers/calendar-service/calendar-
       BrowserModule,
       HttpModule,
     IonicModule.forRoot(MyApp),
+    NgCalendarModule,
 
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
@@ -111,7 +113,7 @@ import { CalendarServiceProvider } from '../providers/calendar-service/calendar-
       Camera,
       //FileTransfer, FileUploadOptions, FileTransferObject,
       File,
-    CalendarServiceProvider
+    CalendarServiceProvider,
 
   ]
 })

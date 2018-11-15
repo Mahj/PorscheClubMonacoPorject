@@ -38,7 +38,7 @@ export class IntroPage {
   }
 
   openPage() {
-      this.navCtrl.setRoot('MainPage'); 
+      this.navCtrl.setRoot('TabsPage'); 
 
   }
 }

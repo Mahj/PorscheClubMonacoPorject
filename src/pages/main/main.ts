@@ -71,6 +71,7 @@ export class MainPage {
                     { name: 'Landing', component: 'LoginBackgroundVideoPage' },
                     { name: 'Landing Video', component: 'LandingPage' },
                     { name: 'Calendar', component: 'CalendarPage' },
+                    { name: 'Calendar2', component: 'EventCalendarPage' },
 
                     { name: 'Discover Places', component: 'CityCategoryPage' },
                     { name: 'e-commerce Shopping', component: 'ShoppingCategoryPage' },
