@@ -52,6 +52,7 @@ export class CalendarPage {
     let date = new Date();
     let options = {
       calendarId: cal.id,
+      
       calendarName: cal.name,
       url: "https://ionicacademy.com",
       firstReminderMinutes: 15
