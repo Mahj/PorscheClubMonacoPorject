@@ -1,3 +1,5 @@
+import { Platform } from 'ionic-angular';
+import { Calendar } from '@ionic-native/calendar';
 //import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
@@ -12,8 +14,23 @@ import { File } from '@ionic-native/file';
 @Injectable()
 export class CalendarServiceProvider {
 
-  constructor(private transfer: FileTransfer, private file: File) {
+  events = [];
+
+  constructor(private transfer: FileTransfer, private file: File, private calendar: Calendar, private plt: Platform) {
     console.log('Hello CalendarServiceProvider Provider');
+    if (this.plt.is('ios')) {
+      this.calendar.findAllEventsInNamedCalendar('PCM').then(data => {
+        this.events = data;
+      });
+    } else if (this.plt.is('android')) {
+      let start = new Date();
+      let end = new Date();
+      end.setDate(end.getDate() + 31);
+ 
+      this.calendar.listEventsInRange(start, end).then(data => {
+        this.events = data;
+      });
+    }
   }
     fileTransfer: FileTransferObject = this.transfer.create();
   download() {
@@ -23,6 +40,8 @@ export class CalendarServiceProvider {
   }, (error) => {
     // handle error
   });
+  }
 
-}
+
+
 }

@@ -13,10 +13,14 @@ export class CalDetailsPage {
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private calendar: Calendar, private plt: Platform) {
     this.calName = navParams.get('name');
+    console.log(this.calName);
+    
  
     if (this.plt.is('ios')) {
       this.calendar.findAllEventsInNamedCalendar(this.calName).then(data => {
         this.events = data;
+        console.log('Here is the name of the calendar' + this.calName);
+        console.log('' + this.events.length);
       });
     } else if (this.plt.is('android')) {
       let start = new Date();

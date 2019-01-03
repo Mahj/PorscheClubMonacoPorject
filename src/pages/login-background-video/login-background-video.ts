@@ -21,8 +21,8 @@ export class LoginBackgroundVideoPage {
   }
 
   ionViewWillEnter() {
-    this.player.nativeElement.src = '../../assets/videos/videoplayback.mp4';
-    this.player.nativeElement.load();
+    /* this.player.nativeElement.src = '../../assets/videos/videoplayback.mp4';
+    this.player.nativeElement.load(); */
   }
 
   ionViewDidLoad() {
