@@ -17,7 +17,7 @@ export class TabsPage {
 
   homeRoot = 'HomePage'
   eventCalendarRoot = 'EventCalendarPage'
-  photoGaleryRoot = 'PhotoGaleryPage'
+  photoGaleryRoot = 'PhotosPage'
   userProfileRoot = 'ProfileSocialPage'
   shopRoot = 'ShoppingCategoryPage'
 
